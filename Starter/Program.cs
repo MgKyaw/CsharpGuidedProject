@@ -67,47 +67,56 @@ foreach (string name in studentNames)
 
     currentStudentGrade = (decimal)sumAssignmentScores / examAssignments;
 
-    if (currentStudentGrade >= 97)
-        currentStudentLetterGrade = "A+";
-
-    else if (currentStudentGrade >= 93)
-        currentStudentLetterGrade = "A";
-
-    else if (currentStudentGrade >= 90)
-        currentStudentLetterGrade = "A-";
-
-    else if (currentStudentGrade >= 87)
-        currentStudentLetterGrade = "B+";
-
-    else if (currentStudentGrade >= 83)
-        currentStudentLetterGrade = "B";
-
-    else if (currentStudentGrade >= 80)
-        currentStudentLetterGrade = "B-";
-
-    else if (currentStudentGrade >= 77)
-        currentStudentLetterGrade = "C+";
-
-    else if (currentStudentGrade >= 73)
-        currentStudentLetterGrade = "C";
-
-    else if (currentStudentGrade >= 70)
-        currentStudentLetterGrade = "C-";
-
-    else if (currentStudentGrade >= 67)
-        currentStudentLetterGrade = "D+";
-
-    else if (currentStudentGrade >= 63)
-        currentStudentLetterGrade = "D";
-
-    else if (currentStudentGrade >= 60)
-        currentStudentLetterGrade = "D-";
-
-    else
-        currentStudentLetterGrade = "F";
+    currentStudentLetterGrade = GetLetterGrade(currentStudentGrade);
 
     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
 }
 
 Console.WriteLine("\n\rPress the Enter key to continue");
 Console.ReadLine();
+
+static string GetLetterGrade(decimal grade)
+{
+    string currentStudentLetterGrade;
+    
+    if (grade >= 97)
+        currentStudentLetterGrade = "A+";
+
+    else if (grade >= 93)
+        currentStudentLetterGrade = "A";
+
+    else if (grade >= 90)
+        currentStudentLetterGrade = "A-";
+
+    else if (grade >= 87)
+        currentStudentLetterGrade = "B+";
+
+    else if (grade >= 83)
+        currentStudentLetterGrade = "B";
+
+    else if (grade >= 80)
+        currentStudentLetterGrade = "B-";
+
+    else if (grade >= 77)
+        currentStudentLetterGrade = "C+";
+
+    else if (grade >= 73)
+        currentStudentLetterGrade = "C";
+
+    else if (grade >= 70)
+        currentStudentLetterGrade = "C-";
+
+    else if (grade >= 67)
+        currentStudentLetterGrade = "D+";
+
+    else if (grade >= 63)
+        currentStudentLetterGrade = "D";
+
+    else if (grade >= 60)
+        currentStudentLetterGrade = "D-";
+
+    else
+        currentStudentLetterGrade = "F";
+
+    return currentStudentLetterGrade;
+}
