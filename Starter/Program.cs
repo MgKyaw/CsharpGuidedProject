@@ -15,7 +15,7 @@ int[] studentScores = new int[10];
 
 string currentStudentLetterGrade;
 
-Console.WriteLine("Student\t\tScores\tGrade\n");
+Console.WriteLine("Student\t\tGrade\tLetter Grade\n");
 
 foreach (string name in studentNames)
 {
@@ -78,7 +78,7 @@ Console.ReadLine();
 static string GetLetterGrade(decimal grade)
 {
     string currentStudentLetterGrade;
-    
+
     if (grade >= 97)
         currentStudentLetterGrade = "A+";
 
